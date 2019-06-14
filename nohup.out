@@ -332,3 +332,7 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 209ms (Views: 207.1ms | ActiveRecord: 0.0ms)
 
 
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-06-13 19:46:23 +0800 ===
+- Goodbye!
+Exiting
