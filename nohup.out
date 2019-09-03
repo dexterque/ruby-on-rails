@@ -4731,3 +4731,221 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 257ms (Views: 248.1ms | ActiveRecord: 0.0ms)
 
 
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-09-02 19:51:06 +0800 ===
+- Goodbye!
+Exiting
+/home/dexter/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/app_loader.rb:53: warning: Insecure world writable dir /home/dexter/.rbenv/versions in PATH, mode 040777
+The most common rails commands are:
+ generate     Generate new code (short-cut alias: "g")
+ console      Start the Rails console (short-cut alias: "c")
+ server       Start the Rails server (short-cut alias: "s")
+ test         Run tests except system tests (short-cut alias: "t")
+ test:system  Run system tests
+ dbconsole    Start a console for the database specified in config/database.yml
+              (short-cut alias: "db")
+
+ new          Create a new Rails application. "rails new my_app" creates a
+              new application called MyApp in "./my_app"
+
+
+All commands can be run with -h (or --help) for more information.
+In addition to those commands, there are:
+
+Rails:
+  console
+  credentials:edit
+  credentials:show
+  dbconsole
+  destroy
+  encrypted:edit
+  encrypted:show
+  generate
+  new
+  runner
+  secrets:edit
+  secrets:setup
+  secrets:show
+  server
+  test
+  version
+
+Rake:
+  about
+  active_storage:install
+  app:template
+  app:update
+  assets:clean[keep]
+  assets:clobber
+  assets:environment
+  assets:precompile
+  cache_digests:dependencies
+  cache_digests:nested_dependencies
+  db:create
+  db:drop
+  db:environment:set
+  db:fixtures:load
+  db:migrate
+  db:migrate:status
+  db:rollback
+  db:schema:cache:clear
+  db:schema:cache:dump
+  db:schema:dump
+  db:schema:load
+  db:seed
+  db:setup
+  db:structure:dump
+  db:structure:load
+  db:version
+  dev:cache
+  initializers
+  log:clear
+  middleware
+  notes
+  notes:custom
+  restart
+  routes
+  secret
+  stats
+  test
+  test:db
+  test:system
+  time:zones[country_or_offset]
+  tmp:clear
+  tmp:create
+  yarn:install
+
+/home/dexter/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/app_loader.rb:53: warning: Insecure world writable dir /home/dexter/.rbenv/versions in PATH, mode 040777
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.6.1-p33), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://localhost:3000
+Use Ctrl-C to stop
+Started GET "/" for ::1 at 2019-09-03 19:19:22 +0800
+  [1m[35m (54.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/dexter/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/dexter/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 246ms (Views: 240.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2019-09-03 19:19:24 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (9.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (96.2ms)
+Completed 200 OK in 132ms (Views: 34.3ms | ActiveRecord: 88.8ms)
+
+
+Started GET "/articles" for ::1 at 2019-09-03 19:19:33 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for ::1 at 2019-09-03 19:36:05 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/dexter/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (8.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (468.0ms)
+Completed 200 OK in 577ms (Views: 103.6ms | ActiveRecord: 462.8ms)
+
+
+Started GET "/articles/1" for ::1 at 2019-09-03 19:36:12 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (12.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 12.4ms)
+
+
+  
+SyntaxError (/mnt/c/code/myapp/app/views/articles/show.html.erb:25: syntax error, unexpected end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/mnt/c/code/myapp/app/views/articles/show.html.erb:31: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/mnt/c/code/myapp/app/views/articles/show.html.erb:33: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/articles/show.html.erb:25: syntax error, unexpected end
+app/views/articles/show.html.erb:31: syntax error, unexpected ensure, expecting ')'
+app/views/articles/show.html.erb:33: syntax error, unexpected end, expecting ')'
+Started GET "/articles/1" for ::1 at 2019-09-03 19:36:46 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1" for ::1 at 2019-09-03 19:37:46 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (78.7ms)
+Completed 200 OK in 104ms (Views: 87.0ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/articles/1" for ::1 at 2019-09-03 19:51:23 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/dexter/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/mnt/c/code/myapp/app/views/articles/show.html.erb:14: syntax error, unexpected ':', expecting ')'
+...er.append=( f.label :commenter: );@output_buffer.safe_append...
+...                              ^
+/mnt/c/code/myapp/app/views/articles/show.html.erb:25: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+/mnt/c/code/myapp/app/views/articles/show.html.erb:31: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/mnt/c/code/myapp/app/views/articles/show.html.erb:33: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/articles/show.html.erb:14: syntax error, unexpected ':', expecting ')'
+app/views/articles/show.html.erb:25: syntax error, unexpected end, expecting ')'
+app/views/articles/show.html.erb:31: syntax error, unexpected ensure, expecting ')'
+app/views/articles/show.html.erb:33: syntax error, unexpected end, expecting ')'
+Started GET "/articles/1" for ::1 at 2019-09-03 19:51:51 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
